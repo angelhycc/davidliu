@@ -44,7 +44,9 @@ ul li {
   a:active{
     text-decoration: none;
   }
-
+  .artwork{
+    text-align: center;
+  }
 
   #hello{
     color:red;
