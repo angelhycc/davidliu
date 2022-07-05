@@ -47,6 +47,13 @@ ul li {
   .artwork{
     text-align: center;
   }
+  .zoom {
+    transition: transform .2s; 
+  }
+  
+  .zoom:hover {
+    transform: scale(1.05);
+  }
 
   #hello{
     color:red;
