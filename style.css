@@ -1,18 +1,9 @@
-ul {
-    list-style-type: none;
-    
-    margin: 0;
-    padding: 0;
-  }
-
-ul li {
-    display: inline;
-  }
-
-.main {
-    background-color: yellow;
- }
-
+body{
+  background-color: #031716;
+}
+.blank{
+  margin:3%
+}
  /* .test {
     display: inline-block;
     margin: 0 0.5rem;
@@ -28,7 +19,7 @@ ul li {
     /* animation-iteration-count: infinite; */
   }
   a{
-    color: blue;
+    color: white;
     transition: color ease-out;
   }
   a:link{
@@ -45,6 +36,9 @@ ul li {
     text-decoration: none;
   }
   .artwork{
+    color: white;
+    margin-top: 2%;
+    margin-bottom: 2%;
     text-align: center;
   }
   .zoom {
@@ -55,12 +49,12 @@ ul li {
     transform: scale(1.05);
   }
 
-  #hello{
-    color:red;
+  .page{
+    margin-right: 20%;
+    margin-left:20%;
+    margin-top:5%;
+    margin-bottom: 5%;
   }
-  #hello:hover {
-    color:chartreuse;
-  } 
 
   /* @keyframes testing {
     0% { color:blue; }
