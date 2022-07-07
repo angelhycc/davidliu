@@ -19,9 +19,10 @@ body{
   .content{
    display: flex; 
    flex-wrap: wrap; 
-   justify-content: 
-   space-around; 
+   justify-content: space-around; 
    position: relative;
+   margin:0 auto -50; 
+   min-height: 86vh;
   }
   .artwork{
     margin: 5vh;
@@ -38,12 +39,5 @@ body{
     transform: scale(1.05);
   }
 
-  .page{
-    margin-right: 20%;
-    margin-left:20%;
-    margin-top:5%;
-    margin-bottom: 5%;
-  }
- 
 
  

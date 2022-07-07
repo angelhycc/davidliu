@@ -3,17 +3,30 @@ body{
   background-color: #031716;
 }
 /* Slideshow container */
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover{
+  color:salmon
+}
+.content{
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  position: relative;
+
+ }
 .box{
+  color: white;
+  width: 50vw;
   flex-direction: column;
   display: inline-block;
-  width: 55%;
-  height: 80%
+  height: 80%;
 }
 .slideshow-container {
   max-width: 100%;
-  margin-top: 50px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 5vh;
   position:relative;
 }
 
@@ -47,6 +60,7 @@ body{
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
+  color: white;
 }
 
 /* Caption text */
@@ -75,7 +89,7 @@ body{
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: rgb(92, 92, 92);
   border-radius: 50%;
   display: inline-block;
 
@@ -83,7 +97,7 @@ body{
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  background-color: #cacaca;
 }
 
 /* Fading animation */
@@ -98,12 +112,16 @@ body{
 }
 
 .description{
-  width:44%;
+  margin: 5vh;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  width: 40vw;
   color: azure; 
   display: inline-block; 
   vertical-align: top;
   height: 80%;
 }
 .textbox{
-  margin-top: 40%;
+  margin-top: 20%;
 }
