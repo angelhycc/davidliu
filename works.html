@@ -1,96 +1,107 @@
 <html>
-    <head> 
-        <title>David Liu</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="worksStyle.css" />
-        <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-      />
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <script type="text/javascript" src="animation.js"></script>
-      </head>
-<body>
+  <head> 
+    <title>David Liu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="worksStyle.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script type="text/javascript" src="animation.js"></script>
+  </head>
+  <body>
     <nav class="navbar navbar-light bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand" href="index.html">
                 <!-- <img src="/static/images/insta_icon.png" alt="" width="40" height="40"
                     class="d-inline-block align-text-top"> -->
                 <h1 style="color: white"> David Liu</h1>
             </a>
             <div class="float-right">
-                <a href="/" class="container-fluid">Contact</a>
-                <a href="/" class="container-fluid">About</a>
+                <a href="#" class="container-fluid">Contact</a>
+                <a href="#" class="container-fluid">About</a>
             </div>
         </div>
     </nav>
-    <div class="box">
-        <div class="gallery">
-            <div class="slideshow-container">
-                <div class="mySlides fadeout">
-                  <div class="numbertext">1 / 3</div>
-                  <img src="img/earth.png" style="width:100%">
-                  <div class="text">Caption Text</div>
-                </div>
-              
-                <div class="mySlides fadeout">
-                  <div class="numbertext">2 / 3</div>
-                  <img src="img/midterm.jpg" style="width:100%">
-                  <div class="text">Caption Two</div>
-                </div>
-              
-                <div class="mySlides fadeout">
-                  <div class="numbertext">3 / 3</div>
-                  <img src="img/mars.jpg" style="width:100%">
-                  <div class="text">Caption Three</div>
-                </div>
-              
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                <br>
-            </div> 
-            
-        </div>
-          <!-- The dots/circles -->
-          <div class="dots" style="position:absolute">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
+    
+    <div class="content" style="margin:0 auto -50; min-height: 100%;">
+      <div class="box">
+        <div class="slideshow-container" >
+          <div class="mySlides fadeout">
+            <div class="numbertext">1 / 3</div>
+              <img src="img/earth.png" style="width:100%">
+              <div class="text">Caption Text</div>
+            </div>
+            <div class="mySlides fadeout">
+              <div class="numbertext">2 / 3</div>
+              <img src="img/midterm.jpg" style="width:100%">
+              <div class="text">Caption Two</div>
+            </div>
+            <div class="mySlides fadeout">
+              <div class="numbertext">3 / 3</div>
+              <img src="img/mars.jpg" style="width:100%">
+              <div class="text">Caption Three</div>
+            </div>
+      
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <br>
+        </div> 
+            <!-- The dots/circles -->
+        <div style="width:100%; text-align: center; margin-bottom: 10px;">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
         </div>
         <script>
-            let slideIndex = 1;
-            showSlides(slideIndex);
-            
-            function plusSlides(n) {
-              showSlides(slideIndex += n);
+          let slideIndex = 1;
+          showSlides(slideIndex);
+              
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+              
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+              
+          function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
             }
-            
-            function currentSlide(n) {
-              showSlides(slideIndex = n);
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
             }
-            
-            function showSlides(n) {
-              let i;
-              let slides = document.getElementsByClassName("mySlides");
-              let dots = document.getElementsByClassName("dot");
-              if (n > slides.length) {slideIndex = 1}    
-              if (n < 1) {slideIndex = slides.length}
-              for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-              }
-              for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-              }
-              slides[slideIndex-1].style.display = "block";  
-              dots[slideIndex-1].className += " active";
-            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+          }
         </script>
-        <div class="hehe" style="float: right"> hehe</div>
-    </div>
-    
-    </body>
-
+      </div> <!--box-->
+      <div class="description">
+        <div class="textbox">
+          Description description Description description Description description
+          Description description Description description Description description
+          Description description Description description Description description
+          Description description
+        </div>
+      </div> <!--  description -->
+    </div> <!--  content -->
+    <nav class="navbar navbar-light bg-dark">
+      <div class="container-fluid justify-content-center">
+        <p style="color: white; margin-top: 10px;">contacts</p> 
+        <div class="w-100"></div>
+        <div style="margin-bottom: 20px;">
+          <img src="img/ig.png" width="25px" style="margin-right:20px">
+          <img src="img/mail.png" width="25px"  style="margin-right:20px">
+          <img src="img/phone.png" width="25px" >
+        </div>
+      </div>
+    </nav>
+  </body>
 </html>
